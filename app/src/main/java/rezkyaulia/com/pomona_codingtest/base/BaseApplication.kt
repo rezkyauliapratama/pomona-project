@@ -4,7 +4,6 @@ import android.app.Application
 import rezkyaulia.com.pomona_codingtest.di.application.ApplicationComponent
 import rezkyaulia.com.pomona_codingtest.di.application.ApplicationModule
 import rezkyaulia.com.pomona_codingtest.di.application.NetworkModule
-import com.androidnetworking.AndroidNetworking
 import rezkyaulia.com.pomona_codingtest.di.application.DaggerApplicationComponent
 
 /**
@@ -21,7 +20,6 @@ class BaseApplication : Application(){
         component = initDagger(this)
         component.inject(this)
 
-        AndroidNetworking.initialize(this)
     }
 
     private fun initDagger(app: BaseApplication): ApplicationComponent =

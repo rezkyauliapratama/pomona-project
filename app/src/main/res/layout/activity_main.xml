@@ -4,7 +4,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="rezkyaulia.com.pomona_codingtest.ui.MainViewModel" />
+            type="rezkyaulia.com.pomona_codingtest.ui.main.MainViewModel" />
 
     </data>
 

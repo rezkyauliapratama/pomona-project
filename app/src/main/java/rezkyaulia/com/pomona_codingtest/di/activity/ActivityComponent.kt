@@ -2,7 +2,8 @@ package rezkyaulia.com.pomona_codingtest.di.activity
 
 import rezkyaulia.com.pomona_codingtest.di.application.ApplicationComponent
 import dagger.Component
-import rezkyaulia.com.pomona_codingtest.ui.MainActivity
+import rezkyaulia.com.pomona_codingtest.ui.main.MainActivity
+import rezkyaulia.com.pomona_codingtest.ui.login.LoginActivity
 
 /**
  * Created by Rezky Aulia Pratama on 15/8/18.
@@ -12,4 +13,5 @@ import rezkyaulia.com.pomona_codingtest.ui.MainActivity
 interface ActivityComponent{
 
     fun inject(activity: MainActivity)
+    fun inject(activity: LoginActivity)
 }

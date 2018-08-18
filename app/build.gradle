@@ -54,6 +54,8 @@ dependencies {
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 
+    implementation project(path: ':light-optimization-data')
+
     //anko
     implementation "org.jetbrains.anko:anko:$rootProject.ankoVersion"
     implementation "org.jetbrains.anko:anko-design:$rootProject.ankoVersion"
@@ -66,9 +68,12 @@ dependencies {
     implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
 
-    //networking
-    implementation "com.amitshekhar.android:android-networking:$rootProject.fanVersion"
+
+    //gson
     implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //okhttp
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
 
     //dagger2
     implementation "com.google.dagger:dagger:$rootProject.dagger2Version"

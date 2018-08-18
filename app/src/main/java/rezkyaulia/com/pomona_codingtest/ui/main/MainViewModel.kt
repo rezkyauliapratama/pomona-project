@@ -1,4 +1,4 @@
-package rezkyaulia.com.pomona_codingtest.ui
+package rezkyaulia.com.pomona_codingtest.ui.main
 
 import android.rezkyaulia.com.hellokotlin.data.DataManager
 import org.jetbrains.anko.error
