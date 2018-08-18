@@ -1,6 +1,7 @@
 package rezkyaulia.com.pomona_codingtest.ui
 
 import android.rezkyaulia.com.hellokotlin.data.DataManager
+import org.jetbrains.anko.error
 import rezkyaulia.com.pomona_codingtest.base.BaseViewModel
 import javax.inject.Inject
 
@@ -10,6 +11,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(val dataManager: DataManager) : BaseViewModel(){
 
     init {
-
+        error { "mainviewmodel" }
+        error { dataManager.getRepo().url }
     }
 }

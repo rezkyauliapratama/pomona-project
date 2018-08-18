@@ -11,12 +11,6 @@ import javax.inject.Singleton
 class DataManager @Inject constructor(private val apiRepository: ApiRepository){
 
     fun getRepo(): ApiRepository{
-        if (apiRepository != null){
-            Log.e("datamanager", "repo != null")
-        }else{
-            Log.e("datamanager", "repo == null")
-
-        }
         return apiRepository
     }
 }
