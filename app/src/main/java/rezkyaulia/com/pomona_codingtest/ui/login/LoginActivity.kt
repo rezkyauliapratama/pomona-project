@@ -1,7 +1,9 @@
 package rezkyaulia.com.pomona_codingtest.ui.login
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.rezkyaulia.com.hellokotlin.base.BaseActivity
 import android.support.v4.app.LoaderManager
@@ -11,9 +13,13 @@ import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.error
+import org.jetbrains.anko.toast
 import rezkyaulia.com.pomona_codingtest.BR
 import rezkyaulia.com.pomona_codingtest.R
+import rezkyaulia.com.pomona_codingtest.data.network.NetworkStatus
 import rezkyaulia.com.pomona_codingtest.databinding.ActivityLoginBinding
+import rezkyaulia.com.pomona_codingtest.ui.UiStatus
+import rezkyaulia.com.pomona_codingtest.ui.main.MainActivity
 
 
 /**
@@ -43,7 +49,26 @@ class LoginActivity: BaseActivity<ActivityLoginBinding, LoginViewModel>(){
         super.onCreate(savedInstanceState)
 
         initView()
+        initObserver()
+    }
 
+    private fun initObserver() {
+        viewModel.viewStatuLD.observe(this, Observer {
+            if (it == UiStatus.SHOW_LOADER){
+                layout_progress.visibility = View.VISIBLE
+            }else if (it == UiStatus.HIDE_LOADER){
+                layout_progress.visibility = View.GONE
+            }
+        })
+
+        viewModel.netWorkStatusLD.observe(this, Observer {
+            if (it == NetworkStatus.SUCCESS){
+                startActivity(Intent(this,MainActivity::class.java))
+                finish()
+            }else if(it == NetworkStatus.NOT_SUCCESS){
+                toast("TIDAK SUKSES")
+            }
+        })
     }
 
 

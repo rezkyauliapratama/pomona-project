@@ -102,6 +102,10 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$rootProject.arcCompVersion"
     implementation "android.arch.work:work-runtime:1.0.0-alpha06"
 
+    //preference manager
+    //preferences manager
+    implementation "com.scottyab:secure-preferences-lib:$rootProject.secureprefVersion"
+
     //test
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
