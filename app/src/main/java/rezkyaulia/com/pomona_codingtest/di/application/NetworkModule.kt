@@ -25,7 +25,6 @@ class NetworkModule{
     @Provides
     @NetworkInfo
     internal fun provideBaseUrl(): String {
-        //        return "http://156.67.221.206/dont-do-framework/public/v1/";
         return BuildConfig.BASE_URL
     }
     @Provides
